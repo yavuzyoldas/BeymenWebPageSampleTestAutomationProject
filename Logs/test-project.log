@@ -211,3 +211,20 @@
 2024-05-04 00:52:14 INFO  Log:13 - step -> increaseNumberProducts
 2024-05-04 00:52:14 INFO  Log:13 - step -> productNumberCheck
 2024-05-04 00:52:14 INFO  Log:13 - step -> deleteProductsFromBasketAndCheck
+2024-05-04 01:04:50 INFO  Log:13 - step -> homePageCheck
+2024-05-04 01:04:50 INFO  Log:13 - Home page available!
+2024-05-04 01:04:50 INFO  Log:13 - step -> deleteProductsFromBasketAndCheck
+2024-05-04 01:04:50 INFO  Log:13 - step -> typeDataToSearchBarFirst
+2024-05-04 01:04:55 INFO  Log:13 - step -> cleanToSearchBar
+2024-05-04 01:04:55 INFO  Log:13 - step -> readDataFromExcelForSecond
+2024-05-04 01:04:56 INFO  Log:13 - step -> typeDataToSearchBarSecond
+2024-05-04 01:04:57 INFO  Log:13 - step -> sendKeyDataWithEnter
+2024-05-04 01:04:59 INFO  Log:13 - step -> chooseRandomShirt
+2024-05-04 01:04:59 INFO  Log:13 - Details have been saved.Comfort Fit Beyaz Oxford Gömlek,2.699 TL
+2024-05-04 01:04:59 INFO  Log:13 - step -> getAndWriteDetailsToTxt
+2024-05-04 01:05:00 INFO  Log:13 - step -> addProductToBasket
+2024-05-04 01:05:01 INFO  Log:13 - step -> openTheBasket
+2024-05-04 01:05:02 INFO  Log:13 - step -> comparisonOfProductPriceAndBasketPrice
+2024-05-04 01:05:02 INFO  Log:13 - step -> increaseNumberProducts
+2024-05-04 01:05:02 INFO  Log:13 - step -> productNumberCheck
+2024-05-04 01:05:02 INFO  Log:13 - step -> deleteProductsFromBasketAndCheck
