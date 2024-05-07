@@ -1,5 +1,6 @@
 package org.example.test;
 
+
 import org.junit.jupiter.api.*;
 import org.example.base.BaseTest;
 import org.example.pages.DetailPage;
@@ -23,9 +24,9 @@ public class DetailPageTest extends BaseTest {
 
     }
 
-    @Test
-    @Order(1)
-    public void addProductToBasket(){
+    @BeforeEach
+    public void precondition(){
+
         homePage.homePageCheck();
 
         searchPage.readDataFromExcelForFirst();
@@ -35,6 +36,13 @@ public class DetailPageTest extends BaseTest {
         searchPage.typeDataToSearchBarSecond();
         searchPage.sendKeyDataWithEnter();
         searchPage.chooseRandomShirt();
+
+    }
+
+    @Test
+    @Order(1)
+    public void addProductToBasket(){
+
 
         detailPage.getAndWriteDetailsToTxt();
         Assertions.assertTrue(detailPage.addProductToBasket());

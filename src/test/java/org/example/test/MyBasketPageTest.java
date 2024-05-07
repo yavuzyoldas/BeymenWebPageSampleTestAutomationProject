@@ -26,9 +26,9 @@ public class MyBasketPageTest extends BaseTest {
 
     }
 
-    @Test
-    @Order(1)
-    public void checkTheBasket() throws InterruptedException {
+    @BeforeEach
+    public void precondition(){
+
         homePage.homePageCheck();
 
         searchPage.readDataFromExcelForFirst();
@@ -41,6 +41,12 @@ public class MyBasketPageTest extends BaseTest {
 
         detailPage.getAndWriteDetailsToTxt();
         detailPage.addProductToBasket();
+
+
+    }
+    @Test
+    @Order(1)
+    public void checkTheBasket() throws InterruptedException {
 
         myBasketPage.openTheBasket();
         myBasketPage.comparisonOfProductPriceAndBasketPrice();

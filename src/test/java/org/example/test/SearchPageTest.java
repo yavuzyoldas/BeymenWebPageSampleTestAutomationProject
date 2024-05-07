@@ -20,10 +20,15 @@ public class SearchPageTest extends BaseTest {
         this.homePage = new HomePage(webDriver);
     }
 
+    @BeforeEach
+    public void precondition(){
+
+        homePage.homePageCheck();
+    }
+
     @Test
     @Order(1)
     public void chooseProduct()  {
-        homePage.homePageCheck();
 
         searchPage.readDataFromExcelForFirst();
         searchPage.typeDataToSearchBarFirst();

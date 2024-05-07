@@ -5,6 +5,9 @@ import org.junit.jupiter.api.AfterAll;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
+
+import java.awt.*;
 
 public class BaseTest {
 
@@ -18,6 +21,9 @@ public class BaseTest {
         options.addArguments("start-maximized");
         setWebDriver();
         getWebDriver().navigate().to("https://www.beymen.com");
+
+        setMousePosition();
+
     }
 
     @AfterAll
@@ -31,6 +37,17 @@ public class BaseTest {
 
     public static WebDriver getWebDriver(){
         return webDriver;
+    }
+
+    public static void setMousePosition(){
+        Robot robot = null;
+        try {
+            robot = new Robot();
+        } catch (AWTException e) {
+            throw new RuntimeException(e);
+        }
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        robot.mouseMove(-screenSize.width, -screenSize.height);
     }
 
 }

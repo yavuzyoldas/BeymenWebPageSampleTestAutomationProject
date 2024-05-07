@@ -67,6 +67,7 @@ public class MyBasketPage  extends BasePage {
     public boolean deleteProductsFromBasketAndCheck(){
 
         Log.info("step -> deleteProductsFromBasketAndCheck");
+        elementHelper.waitVisibilityOfElementLocated(myBasketPageUIElements.myBasketClean);
         elementHelper.click(myBasketPageUIElements.myBasketClean);
         elementHelper.waitVisibilityOfElementLocated(myBasketPageUIElements.myBasketEmptyInfo);
         return elementHelper.isDisplayedElement(myBasketPageUIElements.myBasketEmptyInfo);
